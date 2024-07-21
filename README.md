@@ -15,12 +15,12 @@
 
 ```lua
 use {
-  'hardyrafael17/norminette42.nvim',
+  'x-random-forks/norminette42.nvim',
 }
 ```
 ##### With [lazy](https://www.lazyvim.org/):
 ```lua
-{ "hardyrafael17/norminette42.nvim" },
+{ "x-random-forks/norminette42.nvim" },
 ```
 
 ## Setup
@@ -44,7 +44,7 @@ require("norminette").setup()
 ##### Lazy
 ```lua
 	{
-		"hardyrafael17/norminette42.nvim",
+		"x-random-forks/norminette42.nvim",
 		config = function()
 		local norminette = require("norminette")
 		norminette.setup({
