@@ -48,7 +48,7 @@ end
 
 function M.NorminetteDisable()
 	isEnable = false
-	vim.diagnostic.reset()
+	vim.diagnostic.reset(M.lastNameSpaceId)
 end
 
 function M.NorminetteEnable(maxErrorsToShow)
@@ -63,6 +63,7 @@ function M.norminette42(maxErrorsToShow)
   local bufferHandle = vim.api.nvim_get_current_buf()
   local currentBufferName = vim.api.nvim_buf_get_name(bufferHandle)
   local nameSpaceId = vim.api.nvim_create_namespace("42norme")
+  M.lastNameSpaceId = nameSpaceId
   local returnTable = {}
   local fileHandle = assert(io.popen("norminette " .. currentBufferName, "r"))
   local index = 1
