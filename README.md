@@ -1,3 +1,11 @@
+# norminette42.nvim
+
+> This is a no-history fork of https://github.com/hardyrafael17/norminette42.nvim (more specifically [`dccf0bf845`](https://github.com/hardyrafael17/norminette42.nvim/commit/dccf0bf84555a8960731cbb49603cf4e4107061f)) to remove huge demo files, with some additional bugfixes.
+
+Below is the original README.md (with changes regarding the plugin's name/URL).
+
+---
+
 # Norminette integration for Neovim written in Lua
 
 <br clear="left"/>
@@ -30,10 +38,10 @@ Setup should be run in a lua file or in a lua heredoc [:help lua-heredoc](https:
 ```lua
 -- setup with some options
 require("norminette").setup({
-  runOnSave = ,         -- Optional, Defaults to true, check for errors after save
-  maxErrorsToShow = 5,  -- Only show 5 errors
-  active = false,       -- Optional, Defaults to true can be set to false to deactivate plugin
-  })
+    runOnSave = ,         -- Optional, Defaults to true, check for errors after save
+    maxErrorsToShow = 5,  -- Only show 5 errors
+    active = false,       -- Optional, Defaults to true can be set to false to deactivate plugin
+})
 ```
 
 ```lua
@@ -43,17 +51,17 @@ require("norminette").setup()
 
 ##### Lazy
 ```lua
-	{
-		"x-random-forks/norminette42.nvim",
-		config = function()
-		local norminette = require("norminette")
-		norminette.setup({
-				runOnSave = true,
-				maxErrorsToShow = 5,
-				active = true,
-		})
-	end,
-	},
+{
+    "x-random-forks/norminette42.nvim",
+    config = function()
+        local norminette = require("norminette")
+        norminette.setup({
+            runOnSave = true,
+            maxErrorsToShow = 5,
+            active = true,
+        })
+    end,
+},
 ```
 
 ## Commands
